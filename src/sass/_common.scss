@@ -1,0 +1,118 @@
+@import "./variables";
+
+@mixin makeCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin makeLeft {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+@mixin makeRight {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+@mixin deleteSpace {
+  margin: 0px;
+  padding: 0px;
+}
+
+@mixin styleButton {
+  cursor: pointer;
+  color: white;
+  padding: 10px 15px 10px 15px;
+  background: $base-color-1;
+  border-radius: 10px;
+  transition: all 0.3 ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@mixin button-common {
+  background-color: $base-color-1;
+  color: white;
+  &:hover {
+    background-color: $base-color-2;
+    color: $base-color-1;
+  }
+}
+
+@mixin width-container {
+  padding: 0px 140px;
+}
+
+@mixin mobile-width-container {
+  padding: 0px 10px;
+}
+
+@mixin width-lg-container {
+  padding: 0px 300px;
+}
+
+@mixin page-frame {
+  padding-top: 30px;
+  min-height: 100vh;
+  margin-top: 30px;
+  min-width: 600px;
+}
+
+@mixin borderContent {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 3px solid;
+  border-color: $base-color-2;
+  color: $base-color-1;
+  padding: 20px;
+  background-color: rgba($color: #fff, $alpha: 0.8);
+}
+
+@mixin styleButton {
+  background-color: $base-color-1;
+  color: white;
+  &:hover {
+    background-color: $base-color-2;
+    color: $base-color-1;
+  }
+}
+
+@mixin setBackgroundFixed($url) {
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@mixin scroll-custom {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    width: 6px;
+    height: 10px;
+    border: 1px solid #adb5bd;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    position: absolute;
+    background: #adb5bd;
+    border-radius: 8px;
+    border: 1px solid #adb5bd;
+  }
+  &:hover::-webkit-scrollbar {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 6px;
+    height: 10px;
+  }
+}
